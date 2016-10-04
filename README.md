@@ -12,7 +12,7 @@ $ npm i --save simplify-string
 
 ```js
 require("should");
-var simplifyString = require("../lib");
+var simplifyString = require("simplify-string");
 
 describe("simplify-string", function () {
   it("should simplify a string", function () {
