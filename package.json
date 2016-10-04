@@ -1,0 +1,47 @@
+{
+  "name": "simplify-string",
+  "version": "0.0.0",
+  "description": "Create a primitive representation of a string",
+  "homepage": "https://github.com/s-a/simplify-string",
+  "author": {
+    "name": "s-a",
+    "email": "stephan.ahlf@googlemail.com",
+    "url": "https://github.com/s-a"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "keywords": [
+    "string"
+  ],
+  "devDependencies": {
+    "eslint": "^3.1.1",
+    "eslint-config-xo-space": "^0.14.0",
+    "gulp": "^3.9.0",
+    "gulp-coveralls": "^0.1.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^1.0.0",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-mocha": "^2.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0",
+    "should": "^11.1.0",
+    "uglifyjs": "^2.4.10"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": "https://github.com/s-a/simplify-string.git",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "make": "node node_modules/uglify-js/bin/uglifyjs lib/index.js > dist/simplify-string.min.js",
+    "bump" : "npm test && npm run make && npm version patch && git push && git push --tags && npm publish",
+    "test": "gulp"
+  },
+  "license": "MIT"
+}
