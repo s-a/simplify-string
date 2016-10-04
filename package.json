@@ -1,6 +1,6 @@
 {
   "name": "simplify-string",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a primitive representation of a string",
   "homepage": "https://github.com/s-a/simplify-string",
   "author": {
@@ -40,7 +40,7 @@
   "scripts": {
     "prepublish": "gulp prepublish",
     "make": "node node_modules/uglify-js/bin/uglifyjs lib/index.js > dist/simplify-string.min.js",
-    "bump" : "npm test && npm run make && npm version patch && git push && git push --tags && npm publish",
+    "bump": "npm test && npm run make && npm version patch && git push && git push --tags && npm publish",
     "test": "gulp"
   },
   "license": "MIT"
